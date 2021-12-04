@@ -25,12 +25,12 @@ public class SwaggerConfig {
     //配置Swagger信息 apiInfo类
     private ApiInfo apiInfo(){
         //作者信息
-        Contact DEFAULT_CONTACT = new Contact("心心”乡“惜", "", "");
+        Contact DEFAULT_CONTACT = new Contact("心心”乡“惜", "https://github.com/ysygMhdxw/RuralPro_Backend", "");
 
         return new ApiInfo("RuralPro API文档",
                 "Api Documentation",
                 "v1.0",
-                "",
+                "https://github.com/ysygMhdxw/RuralPro_Backend",
                 DEFAULT_CONTACT,
                 "Apache 2.0",
                 "http://www.apache.org/licenses/LICENSE-2.0",
