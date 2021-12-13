@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ChinaGeo.json")
-public class JsonController {
+@RequestMapping("/County")
+public class CountyDataController {
     @Autowired
     private getJsonServiceImp getJsonService;
 
-    @GetMapping
-    public Result<?> getChinaGeoJson() throws IOException {
-        String jsonObject=getJsonService.getChinaGeoJson();
-        return Result.success(jsonObject);
-    }
+    @GetMapping("/description")
+    public Result<?> getCountyData(){
+        List<County> counties =getJsonService.getCountyData();
+        return Result.success(counties);
 
+    }
 }

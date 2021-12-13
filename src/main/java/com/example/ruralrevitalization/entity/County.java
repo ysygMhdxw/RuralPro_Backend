@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class County {
    private String Name;
-   private String englishName;
+   private String Introduction;
 }

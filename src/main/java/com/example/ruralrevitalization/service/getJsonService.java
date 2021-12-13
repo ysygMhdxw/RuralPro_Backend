@@ -1,8 +1,9 @@
 package com.example.ruralrevitalization.service;
 
-import com.alibaba.fastjson.JSONObject;
+import com.example.ruralrevitalization.entity.County;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * 获得json
@@ -17,4 +18,11 @@ public interface getJsonService {
      * @return {@code JSONObject}
      */
     String getChinaGeoJson() throws IOException;
+
+
+    /**
+     * 获取所有贫困县的信息
+     * @return {@code List<County>}
+     */
+    List<County> getCountyData();
 }
