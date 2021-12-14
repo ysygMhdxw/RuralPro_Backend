@@ -20,9 +20,5 @@ public interface getJsonService {
     String getChinaGeoJson() throws IOException;
 
 
-    /**
-     * 获取所有贫困县的信息
-     * @return {@code List<County>}
-     */
-    List<County> getCountyData();
+
 }

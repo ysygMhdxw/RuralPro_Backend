@@ -1,8 +1,6 @@
 package com.example.ruralrevitalization.service;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.example.ruralrevitalization.dao.TestMapper;
+import com.example.ruralrevitalization.dao.MyMapper;
 import com.example.ruralrevitalization.entity.County;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,7 @@ import java.util.Map;
 public class getJsonServiceImp implements getJsonService{
 
     @Autowired
-    private TestMapper testMapper;
+    private MyMapper testMapper;
     @Override
     public String getChinaGeoJson() throws IOException {
 //        File file=new File("")
@@ -32,8 +30,5 @@ public class getJsonServiceImp implements getJsonService{
         return jsonString;
     }
 
-    @Override
-    public List<County> getCountyData() {
-        return testMapper.select();
-    }
+
 }
