@@ -2,6 +2,7 @@ package com.example.ruralrevitalization.dao;
 
 import com.example.ruralrevitalization.entity.County;
 import com.example.ruralrevitalization.entity.MapData;
+import com.example.ruralrevitalization.entity.Story;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.mapstruct.Mapper;
@@ -17,5 +18,9 @@ public interface MyMapper {
 
     @Select("select * from mapdata where year = ${year}")
     List<MapData> selectMapdata(@Param(value = "year")int year);
+
+    @Select("select * from storydata")
+    List<Story> selectStorydata();
+
 
 }

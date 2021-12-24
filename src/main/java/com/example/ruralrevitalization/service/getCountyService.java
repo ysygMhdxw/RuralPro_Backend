@@ -14,4 +14,19 @@ public interface getCountyService {
      */
     List<County> getCountyData();
 
+
+    /**
+     * 获取所有贫困市级的人均生产GDP
+     * @return {@code List<List<Object>>}
+     */
+    List<List<Object>> getCityGDPPerCapiaData();
+
+
+    /**
+     * 获取所有贫困市级的GDP总值
+     *
+     * @return {@code List<List<Object>>}
+     */
+    List<List<Object>>getCityGDPData();
+
 }
