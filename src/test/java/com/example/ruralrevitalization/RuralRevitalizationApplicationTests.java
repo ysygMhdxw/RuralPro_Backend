@@ -21,29 +21,29 @@ class RuralRevitalizationApplicationTests {
     @Autowired
     PovertyStoryServiceImp povertyStoryService;
 
-    @Test
-    void contextLoads() {
-    }
-    @Test
-    void getChinaGeoJson() throws IOException {
-        String  jsonString=getJsonService.getChinaGeoJson();
-    }
-
-    @Test
-    void testgetCityGDPData(){
-        List<List<Object>> countyYearDataList= getCountyService.getCityGDPPerCapiaData();
-        for(Object countyYearData:countyYearDataList){
-            System.out.println(countyYearData);
-        }
-        System.out.println(countyYearDataList);
-    }
-
-
-    @Test
-    void testfindPovertyData(){
-        List<Story> stories=povertyStoryService.findPovertyData();
-//        System.out.println(stories);
-    }
+//    @Test
+//    void contextLoads() {
+//    }
+//    @Test
+//    void getChinaGeoJson() throws IOException {
+//        String  jsonString=getJsonService.getChinaGeoJson();
+//    }
+//
+//    @Test
+//    void testgetCityGDPData(){
+//        List<List<Object>> countyYearDataList= getCountyService.getCityGDPPerCapiaData();
+//        for(Object countyYearData:countyYearDataList){
+//            System.out.println(countyYearData);
+//        }
+//        System.out.println(countyYearDataList);
+//    }
+//
+//
+//    @Test
+//    void testfindPovertyData(){
+//        List<Story> stories=povertyStoryService.findPovertyData();
+////        System.out.println(stories);
+//    }
 
 
 }
