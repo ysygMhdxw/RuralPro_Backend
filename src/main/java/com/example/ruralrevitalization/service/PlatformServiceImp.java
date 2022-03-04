@@ -19,7 +19,7 @@ public class PlatformServiceImp implements PlatformService {
         List<Platform> platforms=mapper.selectPlatformData(type);
         List<JSONObject>objects=new ArrayList<>();
         for(Platform platform:platforms){
-            String intro=platform.getIntroduction().substring(0,100);
+            String intro=platform.getIntroduction().substring(0,70);
             platform.setIntroduction("  "+intro+"...");
            String str=JSONObject.toJSONString(platform);
            JSONObject obj=JSONObject.parseObject(str);
