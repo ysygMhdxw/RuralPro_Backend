@@ -23,7 +23,7 @@ public class PovertyStoryServiceImp implements PovertyStoryService {
         List<Story> stories=myMapper.selectStorydata();
         for(Story story:stories){
             if(story.getContent().length()>50){
-                story.setContent(story.getContent().substring(0,50));
+                story.setContent(story.getContent().substring(0,50)+"...");
             }
         }
         return stories;
