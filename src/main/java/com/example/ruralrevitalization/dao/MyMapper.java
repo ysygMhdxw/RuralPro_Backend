@@ -2,6 +2,7 @@ package com.example.ruralrevitalization.dao;
 
 import com.example.ruralrevitalization.entity.County;
 import com.example.ruralrevitalization.entity.MapData;
+import com.example.ruralrevitalization.entity.Question;
 import com.example.ruralrevitalization.entity.Story;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -22,5 +23,7 @@ public interface MyMapper {
     @Select("select * from storydata")
     List<Story> selectStorydata();
 
+    @Select("select * from question_source")
+    List<Question> selectQuestiondata();
 
 }
