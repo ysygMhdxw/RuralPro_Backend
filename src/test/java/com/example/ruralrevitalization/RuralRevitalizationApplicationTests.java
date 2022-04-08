@@ -1,6 +1,9 @@
 package com.example.ruralrevitalization;
 
+import com.alibaba.fastjson.JSONObject;
+import com.example.ruralrevitalization.entity.Platform;
 import com.example.ruralrevitalization.entity.Story;
+import com.example.ruralrevitalization.service.PlatformServiceImp;
 import com.example.ruralrevitalization.service.PovertyStoryServiceImp;
 import com.example.ruralrevitalization.service.getCountyServiceImp;
 import com.example.ruralrevitalization.service.getJsonServiceImp;
@@ -20,6 +23,9 @@ class RuralRevitalizationApplicationTests {
     getCountyServiceImp getCountyService;
     @Autowired
     PovertyStoryServiceImp povertyStoryService;
+
+    @Autowired
+    PlatformServiceImp platformService;
 
 //    @Test
 //    void contextLoads() {
@@ -45,5 +51,9 @@ class RuralRevitalizationApplicationTests {
 ////        System.out.println(stories);
 //    }
 
-
+    @Test
+    void testfindPlatformDataByType(){
+        List<JSONObject> platforms=platformService.getPlatformByType("platform");
+        System.out.println(platforms);
+    }
 }
