@@ -2,7 +2,6 @@ package com.example.ruralrevitalization.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -34,7 +33,7 @@ public class SwaggerConfig {
                 DEFAULT_CONTACT,
                 "Apache 2.0",
                 "http://www.apache.org/licenses/LICENSE-2.0",
-                new ArrayList());
+                new ArrayList<>());
     }
 }
 //测试运行：http://localhost:9654/swagger-ui.html

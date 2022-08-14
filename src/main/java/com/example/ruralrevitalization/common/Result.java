@@ -4,7 +4,7 @@ public class Result<T> {
     private String code;
     private String msg;
     private T data;
-//    表示泛型 任何数据类型都可以被result包含
+    // 表示泛型 任何数据类型都可以被result包含
 
     public String getCode() {
         return code;
@@ -37,8 +37,8 @@ public class Result<T> {
         this.data = data;
     }
 
-    public static Result success() {
-        Result result = new Result<>();
+    public static Result<?> success() {
+        Result<?> result = new Result<>();
         result.setCode("0");
         result.setMsg("成功");
         return result;
@@ -51,8 +51,8 @@ public class Result<T> {
         return result;
     }
 
-    public static Result error(String code, String msg) {
-        Result result = new Result();
+    public static Result<?> error(String code, String msg) {
+        Result<?> result = new Result<>();
         result.setCode(code);
         result.setMsg(msg);
         return result;

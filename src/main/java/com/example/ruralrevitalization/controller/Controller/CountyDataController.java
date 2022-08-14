@@ -17,22 +17,21 @@ public class CountyDataController {
     private getCountyServiceImp getCountyService;
 
     @GetMapping("/description")
-    public Result<?> getCountyData(){
-        List<County> counties =getCountyService.getCountyData();
+    public Result<?> getCountyData() {
+        List<County> counties = getCountyService.getCountyData();
         return Result.success(counties);
 
     }
 
     @GetMapping("/get/city/gdp/per/capia/data")
-    public Result<?> getCityGDPPerCapiadata(){
-        List<List<Object>> ans=getCountyService.getCityGDPPerCapiaData();
+    public Result<?> getCityGDPPerCapiadata() {
+        List<List<Object>> ans = getCountyService.getCityGDPPerCapiaData();
         return Result.success(ans);
     }
 
-
     @GetMapping("/get/city/gdp/data")
-    public Result<?> getCityGDPdata(){
-        List<List<Object>> ans=getCountyService.getCityGDPData();
+    public Result<?> getCityGDPdata() {
+        List<List<Object>> ans = getCountyService.getCityGDPData();
         return Result.success(ans);
     }
 

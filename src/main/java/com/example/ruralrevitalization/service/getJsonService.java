@@ -1,9 +1,7 @@
 package com.example.ruralrevitalization.service;
 
-import com.example.ruralrevitalization.entity.County;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * 获得json

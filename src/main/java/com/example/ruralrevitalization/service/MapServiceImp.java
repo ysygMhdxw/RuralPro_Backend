@@ -1,7 +1,6 @@
 package com.example.ruralrevitalization.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.annotation.JSONPOJOBuilder;
 import com.example.ruralrevitalization.dao.MyMapper;
 import com.example.ruralrevitalization.entity.MapData;
 import org.springframework.beans.factory.annotation.Autowired;
