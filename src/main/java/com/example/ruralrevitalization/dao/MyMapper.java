@@ -7,9 +7,9 @@ import com.example.ruralrevitalization.entity.Question;
 
 import com.example.ruralrevitalization.entity.Platform;
 import com.example.ruralrevitalization.entity.Story;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.mapstruct.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,6 +32,9 @@ public interface MyMapper {
 
     @Select("select * from platform where type = \"${type}\"")
     List<Platform> selectPlatformData(@Param(value="type")String type);
+
+    @Select("SELECT * FROM county WHERE Name=\"${name}\"")
+    List<County> selectCountyIntroData(@Param(value="name")String name);
 
 
 

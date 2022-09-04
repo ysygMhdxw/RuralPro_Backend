@@ -20,6 +20,7 @@ public class getCountyServiceImp implements getCountyService {
 
     @Override
     public List<County> getCountyData() {
+
         return myMapper.select();
     }
 
