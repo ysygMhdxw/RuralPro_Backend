@@ -18,8 +18,8 @@ public class CountyDataController {
     @Autowired
     private getCountyServiceImp getCountyService;
 
-    @Autowired
-    private CountyServiceImp countyService;
+//    @Autowired
+//    private CountyServiceImp countyService;
 
     @GetMapping("/description")
     public Result<?> getCountyData() {
@@ -40,10 +40,10 @@ public class CountyDataController {
         return Result.success(ans);
     }
 
-    @GetMapping("/get/county/description/\"{name}\"")
-    public Result<?> getCountyIntroduction(String name) {
-        JSONObject ans = countyService.getCountyIntroduction(name);
-        return Result.success(ans);
-    }
+//    @GetMapping("/get/county/description/\"{name}\"")
+//    public Result<?> getCountyIntroduction(String name) {
+//        JSONObject ans = countyService.getCountyIntroduction(name);
+//        return Result.success(ans);
+//    }
 
 }
